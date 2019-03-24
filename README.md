@@ -11,7 +11,7 @@ Get a web application running live on a secure web server.
 #### 1. Launch your Virtual Machine with your Udacity account and log in
 Launched Amazon EC2 instance using this [link](https://www.udacity.com/account#!/development_environment) from Udacity. Then I accessed the EC2 instance using SSH with the following command:
 ```
-ssh -i .ssh/udacity_key.rsa root@52.38.46.41
+ssh -i .ssh/grader_key -p 2200 grader@35.159.31.11
 ```
 
 #### 2. Create a new user named grader and grant this user sudo permissions 
@@ -68,7 +68,7 @@ sudo apt-get install libapache2-mod-wsgi
 And configured a new Virtual Host by `sudo vim /etc/apache2/sites-available/catalog-app.conf` with the following content:
 ```
 <VirtualHost *:80>
-        ServerName http://ec2-52-38-46-41.us-west-2.compute.amazonaws.com/
+        ServerName 35.159.31.11
         #ServerAdmin admin@mywebsite.com
         WSGIScriptAlias / /var/www/catalog-app/catalog.wsgi
         <Directory /var/www/catalog-app/catalog/>
