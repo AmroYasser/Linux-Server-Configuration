@@ -8,10 +8,10 @@ Get a web application running live on a secure web server.
 |URL|http://ec2-35-159-31-11.eu-central-1.compute.amazonaws.com|
 ## Summary of software and configuration
 ### Performing basic configuration
-#### 1. Launch your Virtual Machine with your Udacity account and log in
-Launched Amazon EC2 instance using this [link](https://www.udacity.com/account#!/development_environment) from Udacity. Then I accessed the EC2 instance using SSH with the following command:
+#### 1. Launch your Virtual Machine and log in
+I accessed the EC2 instance using SSH with the following command:
 ```
-ssh -i .ssh/grader_key -p 2200 grader@35.159.31.11
+ssh -i .ssh/LightsailDefaultKey-eu-central-1.pem ubuntu@35.159.31.11
 ```
 
 #### 2. Create a new user named grader and grant this user sudo permissions 
