@@ -27,6 +27,11 @@ Updated all currently installed applications:
 sudo apt-get update
 sudo apt-get upgrade
 ```
+In order to install packages **kept back** I run:
+```
+sudo apt-get update && sudo apt-get dist-upgrade
+```
+
 And setup Python environment:
 ```
 sudo apt-get install python-psycopg2
